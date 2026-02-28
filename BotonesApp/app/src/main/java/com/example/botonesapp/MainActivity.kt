@@ -5,6 +5,7 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.BorderStroke
+import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
@@ -36,20 +37,31 @@ import androidx.compose.ui.unit.sp
 import com.example.botonesapp.ui.theme.BotonesAppTheme
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
+import androidx.compose.material.icons.filled.Brightness6
 import androidx.compose.material.icons.filled.Favorite
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.setValue
 import androidx.compose.material3.SwitchDefaults
 import androidx.compose.material.icons.filled.ShoppingCart
 import androidx.compose.material3.FloatingActionButton
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.darkColorScheme
+import androidx.compose.material3.lightColorScheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-            BotonesAppTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
+            var darkTheme by remember { mutableStateOf(false) }
+            BotonesAppTheme(darkTheme = darkTheme) {
+                Scaffold(
+                    modifier = Modifier.fillMaxSize(),
+                    floatingActionButton = {
+                        BotonCambiarTema {
+                            darkTheme = !darkTheme
+                        }
+                    }) { innerPadding ->
                     Contenido(innerPadding)
                 }
             }
@@ -89,6 +101,30 @@ fun Contenido(paddingValues: PaddingValues) {
 }
 
 @Composable
+fun BotonCambiarTema(onClickCambiarTema: () -> Unit) {
+    Button(
+        onClick = onClickCambiarTema,
+        colors = ButtonDefaults.buttonColors(
+            containerColor = Color(0xFF6200EE),
+            contentColor = Color.White
+        )
+    ) {
+
+        Icon(
+            imageVector = Icons.Default.Brightness6,
+            contentDescription = "Cambiar tema",
+            modifier = Modifier.padding(end = 8.dp)
+        )
+
+        Text(
+            text = "Cambiar Tema",
+            fontSize = 18.sp
+        )
+    }
+}
+
+
+@Composable
 fun BotonFlotante() {
     FloatingActionButton(
         onClick = { },
@@ -101,6 +137,7 @@ fun BotonFlotante() {
         )
     }
 }
+
 @Composable
 fun BotonConIcono() {
     Button(
@@ -123,6 +160,7 @@ fun BotonConIcono() {
         )
     }
 }
+
 @Composable
 fun BotonSwitchColor() {
 
@@ -174,6 +212,7 @@ fun BotonSwitch() {
         }
     )
 }
+
 @Composable
 fun BotonIcono() {
     IconButton(onClick = {}) {
