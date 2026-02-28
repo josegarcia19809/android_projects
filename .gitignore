@@ -1,0 +1,80 @@
+# =========================
+# macOS
+# =========================
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# =========================
+# Gradle
+# =========================
+.gradle/
+build/
+*/build/
+
+# Archivos de log
+*.log
+
+# Archivos temporales
+*.tmp
+*.bak
+*.swp
+*.lock
+
+# =========================
+# Android Studio / IntelliJ
+# =========================
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Archivos específicos que NO deben subirse
+.idea/caches/
+.idea/libraries/
+.idea/modules.xml
+.idea/workspace.xml
+.idea/navEditor.xml
+.idea/assetWizardSettings.xml
+
+# =========================
+# Archivos locales del proyecto
+# =========================
+local.properties
+
+# =========================
+# Capturas generadas
+# =========================
+captures/
+
+# =========================
+# Archivos de compilación Android
+# =========================
+*.apk
+*.ap_
+*.aab
+
+# Archivos de keystore (muy importante no subirlos)
+*.jks
+*.keystore
+
+# =========================
+# NDK
+# =========================
+.externalNativeBuild/
+.cxx/
+
+# =========================
+# Firebase
+# =========================
+google-services.json
+
+# =========================
+# Kotlin
+# =========================
+.kotlin/
+
+# =========================
+# Otros
+# =========================
+out/
