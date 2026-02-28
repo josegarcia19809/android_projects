@@ -35,11 +35,13 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.botonesapp.ui.theme.BotonesAppTheme
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.Favorite
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.setValue
 import androidx.compose.material3.SwitchDefaults
 import androidx.compose.material.icons.filled.ShoppingCart
+import androidx.compose.material3.FloatingActionButton
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -81,9 +83,24 @@ fun Contenido(paddingValues: PaddingValues) {
         BotonSwitchColor()
         Space()
         BotonConIcono()
+        Space()
+        BotonFlotante()
     }
 }
 
+@Composable
+fun BotonFlotante() {
+    FloatingActionButton(
+        onClick = { },
+        containerColor = Color(0xFF1976D2),
+        contentColor = Color.White
+    ) {
+        Icon(
+            imageVector = Icons.Default.Add,
+            contentDescription = "Agregar"
+        )
+    }
+}
 @Composable
 fun BotonConIcono() {
     Button(
