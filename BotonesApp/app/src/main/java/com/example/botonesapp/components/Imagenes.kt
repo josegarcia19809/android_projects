@@ -19,6 +19,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
+import coil3.compose.AsyncImage
 import com.example.botonesapp.R
 
 @Composable
@@ -39,7 +40,7 @@ fun Imagenes(paddingValues: PaddingValues) {
             painter = painterResource(R.drawable.venado2),
             contentDescription = "image profile",
             modifier = Modifier
-                .size(300.dp)
+                .size(200.dp)
                 .clip(RoundedCornerShape(50))
                 .border(
                     width = 4.dp, shape = CircleShape,
@@ -47,5 +48,12 @@ fun Imagenes(paddingValues: PaddingValues) {
                 ),
             contentScale = ContentScale.FillBounds
         )
+
+        AsyncImage(
+            model = "https://i.blogs.es/9d6c67/rawjpeg/1366_2000.jpg",
+            contentDescription = "Imagen desde internet",
+            modifier = Modifier.size(250.dp)
+        )
+
     }
 }
