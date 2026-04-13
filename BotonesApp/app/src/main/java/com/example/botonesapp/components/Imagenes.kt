@@ -10,6 +10,7 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.wrapContentSize
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material3.Icon
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -40,7 +41,7 @@ fun Imagenes(paddingValues: PaddingValues) {
             painter = painterResource(R.drawable.venado2),
             contentDescription = "image profile",
             modifier = Modifier
-                .size(200.dp)
+                .size(100.dp)
                 .clip(RoundedCornerShape(50))
                 .border(
                     width = 4.dp, shape = CircleShape,
@@ -53,6 +54,13 @@ fun Imagenes(paddingValues: PaddingValues) {
             model = "https://i.blogs.es/9d6c67/rawjpeg/1366_2000.jpg",
             contentDescription = "Imagen desde internet",
             modifier = Modifier.size(250.dp)
+        )
+
+        Icon(
+            painter = painterResource(R.drawable.baseline_bluetooth_searching_24),
+            contentDescription = null,
+            modifier = Modifier.size(100.dp),
+            tint = Color.Blue
         )
 
     }
