@@ -29,6 +29,7 @@ import com.example.botonesapp.components.BotonSwitchColor
 import com.example.botonesapp.components.BotonSwitchConTexto
 import com.example.botonesapp.components.BotonTexto
 import com.example.botonesapp.components.Imagenes
+import com.example.botonesapp.components.MyBasicList
 import com.example.botonesapp.components.Space
 import com.example.botonesapp.ui.theme.BotonesAppTheme
 
@@ -47,7 +48,8 @@ class MainActivity : ComponentActivity() {
                         }
                     }) { innerPadding ->
                     //Contenido(innerPadding)
-                    Imagenes(innerPadding)
+                    //Imagenes(innerPadding)
+                    MyBasicList(innerPadding)
                 }
             }
         }
