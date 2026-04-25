@@ -31,6 +31,7 @@ import com.example.botonesapp.components.BotonTexto
 import com.example.botonesapp.components.Imagenes
 import com.example.botonesapp.components.MyBasicList
 import com.example.botonesapp.components.MyBasicList2
+import com.example.botonesapp.components.MyBasicList3
 import com.example.botonesapp.components.Space
 import com.example.botonesapp.ui.theme.BotonesAppTheme
 
@@ -50,7 +51,7 @@ class MainActivity : ComponentActivity() {
                     }) { innerPadding ->
                     //Contenido(innerPadding)
                     //Imagenes(innerPadding)
-                    MyBasicList2(innerPadding)
+                    MyBasicList3(innerPadding)
                 }
             }
         }

@@ -1,6 +1,5 @@
 package com.example.botonesapp.components
 
-
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -23,9 +22,17 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.compose.foundation.Image
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.ui.draw.clip
+import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.Alignment
+import com.example.botonesapp.R
 
 @Composable
-fun MyBasicList2(paddingValues: PaddingValues) {
+fun MyBasicList3(paddingValues: PaddingValues) {
     val names = listOf(
         "José",
         "María",
@@ -88,6 +95,15 @@ fun MyBasicList2(paddingValues: PaddingValues) {
         "Sin actividad reciente"
     )
 
+    val imagenes = listOf(
+        "jesus",
+        "juan",
+        "maria",
+        "nohemi",
+        "pedro",
+        "ruth"
+    )
+
     LazyColumn(
         modifier = Modifier
             .fillMaxSize()
@@ -114,26 +130,49 @@ fun MyBasicList2(paddingValues: PaddingValues) {
                 elevation = CardDefaults.cardElevation(6.dp),
                 colors = CardDefaults.cardColors(containerColor = Color.White)
             ) {
-                Column(
-                    modifier = Modifier.padding(20.dp)
+                val randomImageName = imagenes.random()
+
+                val imageRes = when (randomImageName) {
+                    "jesus" -> R.drawable.jesus
+                    "juan" -> R.drawable.juan
+                    "maria" -> R.drawable.maria
+                    "nohemi" -> R.drawable.nohemi
+                    "pedro" -> R.drawable.pedro
+                    "ruth" -> R.drawable.ruth
+                    else -> R.drawable.jesus
+                }
+
+                Row(
+                    modifier = Modifier.padding(16.dp),
+                    verticalAlignment = Alignment.CenterVertically
                 ) {
 
-                    // 🟢 Nombre en negritas
-                    Text(
-                        text = name,
-                        fontSize = 18.sp,
-                        fontWeight = FontWeight.Bold,
-                        color = Color(0xFF222222)
+                    Image(
+                        painter = painterResource(id = imageRes),
+                        contentDescription = "Foto",
+                        modifier = Modifier
+                            .size(56.dp)
+                            .clip(CircleShape)
                     )
 
-                    Spacer(modifier = Modifier.height(4.dp))
+                    Column(
+                        modifier = Modifier.padding(start = 12.dp)
+                    ) {
+                        Text(
+                            text = name,
+                            fontSize = 18.sp,
+                            fontWeight = FontWeight.Bold,
+                            color = Color(0xFF222222)
+                        )
 
-                    // ⚪ Texto secundario (más suave)
-                    Text(
-                        text = randomText,
-                        fontSize = 14.sp,
-                        color = Color.Gray
-                    )
+                        Spacer(modifier = Modifier.height(4.dp))
+
+                        Text(
+                            text = randomText,
+                            fontSize = 14.sp,
+                            color = Color.Gray
+                        )
+                    }
                 }
             }
         }
