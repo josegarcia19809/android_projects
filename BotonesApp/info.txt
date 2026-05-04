@@ -1,4 +1,10 @@
 Curso: Jetpack Compose: Curso definitivo desde 0 [2025]
 
-Componente ProgressBar: Iconos
+Componente ProgressBar: CircularProgressIndicator
 
+
+36. LinearProgressIndicator
+
+37. ProgressIndicator avanzado
+
+38. Loading con animaciones de Lottie
