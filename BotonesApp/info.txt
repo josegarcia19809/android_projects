@@ -1,4 +1,23 @@
 Curso: Jetpack Compose: Curso definitivo desde 0 [2025]
 
-Componente ProgressBar: LinearProgressIndicator y ProgressIndicator avanzado
+Componentes de control de selección:
+
+
+39. Switch
+16 min
+Reproducir
+40. CheckBox
+9 min
+Reproducir
+41. CheckBox avanzado
+11 min
+Reproducir
+42. TriState CheckBox
+9 min
+Reproducir
+43. RadioButton
+5 min
+Reproducir
+44. RadioButton avanzado
+5 min
 

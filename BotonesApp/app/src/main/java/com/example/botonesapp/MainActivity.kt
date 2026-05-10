@@ -1,5 +1,6 @@
 package com.example.botonesapp
 
+
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -34,6 +35,7 @@ import com.example.botonesapp.components.MyBasicList2
 import com.example.botonesapp.components.MyBasicList3
 import com.example.botonesapp.components.Progress
 import com.example.botonesapp.components.Space
+import com.example.botonesapp.components.Tarjeta
 import com.example.botonesapp.ui.theme.BotonesAppTheme
 
 class MainActivity : ComponentActivity() {
@@ -53,7 +55,8 @@ class MainActivity : ComponentActivity() {
                     //Contenido(innerPadding)
                     //Imagenes(innerPadding)
                     //MyBasicList3(innerPadding)
-                    Progress(modifier = Modifier.padding(innerPadding))
+                    // Progress(modifier = Modifier.padding(innerPadding))
+                    Tarjeta(innerPadding)
                 }
             }
         }
