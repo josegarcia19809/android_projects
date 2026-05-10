@@ -29,6 +29,7 @@ import com.example.botonesapp.components.BotonSwitch
 import com.example.botonesapp.components.BotonSwitchColor
 import com.example.botonesapp.components.BotonSwitchConTexto
 import com.example.botonesapp.components.BotonTexto
+import com.example.botonesapp.components.FraudAlertCard
 import com.example.botonesapp.components.Imagenes
 import com.example.botonesapp.components.MyBasicList
 import com.example.botonesapp.components.MyBasicList2
@@ -57,6 +58,7 @@ class MainActivity : ComponentActivity() {
                     //MyBasicList3(innerPadding)
                     // Progress(modifier = Modifier.padding(innerPadding))
                     Tarjeta(innerPadding)
+                    FraudAlertCard()
                 }
             }
         }
