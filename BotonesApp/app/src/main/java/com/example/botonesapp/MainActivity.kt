@@ -34,6 +34,7 @@ import com.example.botonesapp.components.Imagenes
 import com.example.botonesapp.components.MyBasicList
 import com.example.botonesapp.components.MyBasicList2
 import com.example.botonesapp.components.MyBasicList3
+import com.example.botonesapp.components.PantallaSwitch
 import com.example.botonesapp.components.Progress
 import com.example.botonesapp.components.Space
 import com.example.botonesapp.components.Tarjeta
@@ -57,8 +58,9 @@ class MainActivity : ComponentActivity() {
                     //Imagenes(innerPadding)
                     //MyBasicList3(innerPadding)
                     // Progress(modifier = Modifier.padding(innerPadding))
-                    Tarjeta(innerPadding)
-                    FraudAlertCard()
+                    //Tarjeta(innerPadding)
+                   // FraudAlertCard()
+                    PantallaSwitch()
                 }
             }
         }
