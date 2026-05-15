@@ -31,10 +31,13 @@ import com.example.botonesapp.components.BotonSwitchConTexto
 import com.example.botonesapp.components.BotonTexto
 import com.example.botonesapp.components.FraudAlertCard
 import com.example.botonesapp.components.Imagenes
+import com.example.botonesapp.components.ListaCheckBox
 import com.example.botonesapp.components.MyBasicList
 import com.example.botonesapp.components.MyBasicList2
 import com.example.botonesapp.components.MyBasicList3
+import com.example.botonesapp.components.PantallaCheckBox
 import com.example.botonesapp.components.PantallaSwitch
+import com.example.botonesapp.components.PantallaTriState
 import com.example.botonesapp.components.Progress
 import com.example.botonesapp.components.Space
 import com.example.botonesapp.components.Tarjeta
@@ -59,8 +62,11 @@ class MainActivity : ComponentActivity() {
                     //MyBasicList3(innerPadding)
                     // Progress(modifier = Modifier.padding(innerPadding))
                     //Tarjeta(innerPadding)
-                   // FraudAlertCard()
-                    PantallaSwitch()
+                    // FraudAlertCard()
+                    //PantallaSwitch()
+//                    PantallaCheckBox()
+//                    ListaCheckBox()
+                    PantallaTriState()
                 }
             }
         }
