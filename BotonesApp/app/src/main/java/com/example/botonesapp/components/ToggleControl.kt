@@ -4,6 +4,9 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.*
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Check
+import androidx.compose.material.icons.filled.Close
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
@@ -29,7 +32,10 @@ fun PantallaSwitch() {
     var activado by remember {
         mutableStateOf(false)
     }
-
+// Estado Switch con thumbContent
+    var activadoIcono by remember {
+        mutableStateOf(false)
+    }
     Column(
         modifier = Modifier
             .fillMaxSize()
@@ -54,6 +60,33 @@ fun PantallaSwitch() {
                 "❌ Switch DESACTIVADO",
 
             fontSize = 22.sp
+        )
+        Spacer(modifier = Modifier.height(10.dp))
+
+        Switch(
+            checked = activadoIcono,
+            onCheckedChange = {
+                activadoIcono = it
+            },
+
+            thumbContent = {
+                Icon(
+                    imageVector =
+                        if (activadoIcono)
+                            Icons.Default.Check
+                        else
+                            Icons.Default.Close,
+
+                    contentDescription = null
+                )
+            }
+        )
+
+        Text(
+            text = if (activadoIcono)
+                "🌙 Modo activado"
+            else
+                "☀️ Modo desactivado"
         )
     }
 }
