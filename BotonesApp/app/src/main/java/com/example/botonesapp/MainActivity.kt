@@ -32,6 +32,7 @@ import com.example.botonesapp.components.BotonTexto
 import com.example.botonesapp.components.FraudAlertCard
 import com.example.botonesapp.components.Imagenes
 import com.example.botonesapp.components.ListaCheckBox
+import com.example.botonesapp.components.MenuPrincipal
 import com.example.botonesapp.components.MyBasicList
 import com.example.botonesapp.components.MyBasicList2
 import com.example.botonesapp.components.MyBasicList3
@@ -66,11 +67,17 @@ class MainActivity : ComponentActivity() {
                     //PantallaSwitch()
 //                    PantallaCheckBox()
 //                    ListaCheckBox()
-                    PantallaTriState()
+//                    PantallaTriState()
+                    cargarComponentes(innerPadding)
                 }
             }
         }
     }
+}
+
+@Composable
+fun cargarComponentes(paddingValues: PaddingValues) {
+    MenuPrincipal()
 }
 
 @Composable
