@@ -29,6 +29,7 @@ import com.example.botonesapp.components.BotonSwitch
 import com.example.botonesapp.components.BotonSwitchColor
 import com.example.botonesapp.components.BotonSwitchConTexto
 import com.example.botonesapp.components.BotonTexto
+import com.example.botonesapp.components.ComboBoxEjemplo
 import com.example.botonesapp.components.FraudAlertCard
 import com.example.botonesapp.components.Imagenes
 import com.example.botonesapp.components.ListaCheckBox
@@ -77,7 +78,8 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun cargarComponentes(paddingValues: PaddingValues) {
-    MenuPrincipal()
+//    MenuPrincipal()
+    ComboBoxEjemplo()
 }
 
 @Composable
